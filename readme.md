@@ -8,3 +8,14 @@ In this course we are going to explore how the fractal dimension can construct s
 
 Students are free to explore the topic with the software they do prefer, although the examples in class will use GLSL shaders. A basic coding experience is necessary (you nedd to know what variables, float numbers and loops are).
 
+
+### Lesson 1, 26/11/2022
+Introduction to the course. Theory, cartesian plane and definition of a function. Intro to shaders, install visual studio code and glslCanvas extension.
+
+
+
+### Lesson 2, 9/11/2022
+
+Koch curve drawing algorithm (credits to Daniel Shiffman tutorial).
+
+Exercise: Modify the line class, add randomness. Maybe add colors depending on the iteration level?
