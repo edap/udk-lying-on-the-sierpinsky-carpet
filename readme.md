@@ -16,6 +16,26 @@ Introduction to the course. Theory, cartesian plane and definition of a function
 
 ### Lesson 2, 9/11/2022
 
+Theory: Self-similarity and templates
+
 Koch curve drawing algorithm (credits to Daniel Shiffman tutorial).
 
 Exercise: Modify the line class, add randomness. Maybe add colors depending on the iteration level?
+
+
+### Lesson 3, 14/11/2022
+
+Theory, self filling curves.
+
+Hilbert curve in class (credits to Daniel Shiffman)
+
+References:
+[Video tutorial by Numberphilie](https://www.youtube.com/watch?v=x-DgL49CFlM)
+
+[Hilbert's Curve: Is infinite math useful? video by 3Blue1Brown](https://www.youtube.com/watch?v=3s7h2MHQtxc&t=10s)
+
+[Space Filling curves website](http://spacefillingcurves.com/HorrorVacui.html)
+
+[wiki page of the Peano curve](https://en.wikipedia.org/wiki/Peano_curve)
+
+[wiki page of the Hilber Curve](https://en.wikipedia.org/wiki/Hilbert_curve)
