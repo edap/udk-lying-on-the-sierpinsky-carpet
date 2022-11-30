@@ -10,20 +10,38 @@ Students are free to explore the topic with the software they do prefer, althoug
 
 
 ### Lesson 1, 26/11/2022
-Introduction to the course. Theory, cartesian plane and definition of a function. Intro to shaders, install visual studio code and glslCanvas extension.
 
+Introduction to the course. Theory, cartesian plane and definition of a function. Intro to shaders, install visual studio code and glslCanvas extension.
 
 
 ### Lesson 2, 9/11/2022
 
-Theory: Self-similarity and templates
+Theory: Self-similarity and templates PT.1 Affine Transformation
 
 Koch curve drawing algorithm (credits to Daniel Shiffman tutorial).
 
 Exercise: Modify the line class, add randomness. Maybe add colors depending on the iteration level?
 
 
-### Lesson 3, 14/11/2022
+
+### Lesson 3, 16/11/2022
+
+Theory: Self-similarity and templates PT.2 Iterate Functions System
+
+Exercise: Sieroinsky triangle and barnsley fern. Modify the Barnsley fern.
+
+References:
+
+[Paul Bourke fractals](http://paulbourke.net/fractals/ifs/)
+
+### Lesson 4, 30/11/2022
+
+L-Systems
+
+Theory and Exercise in class
+
+
+### Lesson 5, 07/12/2022
 
 Theory, self filling curves.
 
