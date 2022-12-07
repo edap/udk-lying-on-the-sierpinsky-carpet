@@ -107,7 +107,7 @@ const createTree = () => {
     for (const b of branches) {
         addBranch(geometry, b.start.position, b.end.position);
 
-        //TRY Add organs
+        //TRY Add other organs
         if (b.end.position.y > 0 && Math.random() > 0.5) {
             addFlower(b, flowersGeometry);
         } else {
@@ -132,6 +132,7 @@ const addBranch = (geom, v1, v2) => {
     geom.vertices.push(new THREE.Vector3(v2.x, v2.y, v2.z));
 }
 
+// TRY to change the flowerGeometry
 const addFlower = (branch, flowersGeometry) => {
     let flower = flowerGeometry.clone();
     flower.applyMatrix(cachedMatrix4.makeTranslation(
@@ -143,6 +144,7 @@ const addFlower = (branch, flowersGeometry) => {
 }
 
 const addLeaf = (branch, leavesGeometry) => {
+    // TRY to change the leafGeometry
     const leaf = leafGeometry.clone();
     branch.end.getWorldQuaternion(cachedQuat);
 

@@ -15,14 +15,14 @@ var decrease_percent = 0.5;
 
 var rules = [];
 rules[0] = {
-  a: "F",
-  b: "F[+F]F[-F]F"
+  // a: "F",
+  // b: "F[+F]F[-F]F"
 
   // a: "F",
   // b: "F[+F]F[-F][F]"
 
-  // a: "F",
-  // b: "FF+[+F-F-F]-[-F+F+F]"
+  a: "F",
+  b: "FF+[+F-F-F]-[-F+F+F]"
 }
 
 function generate() {

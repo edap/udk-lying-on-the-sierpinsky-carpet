@@ -16,31 +16,7 @@ const tree = new THREE.Group();
 const material = new THREE.LineBasicMaterial({ color: 0xB24E4B });
 const geometry = new THREE.Geometry();
 
-// Flowers variables
-const flowersGeometry = new THREE.Geometry();
-let flowerGeometry = new THREE.SphereGeometry(1, 12, 12);
-const flowerMaterial = new THREE.MeshStandardMaterial({ color: 0x5598CC });
-
-// Leafs variable
-const leavesGeometry = new THREE.Geometry();
-const createLeafGeometry = () => {
-  const points = [];
-  for (let i = 0; i < 10; i++) {
-    points.push(new THREE.Vector2(Math.sin(i * 0.2) * 10 + 5, (i - 5) * 2));
-  }
-
-  const geom = new THREE.LatheGeometry(points, 5, 0, 0.2);
-  geom.computeBoundingBox();
-  const bb = geom.boundingBox;
-  const z = bb.max.z - bb.min.z;
-  const y = bb.max.y - bb.min.y;
-  geom.applyMatrix(cachedMatrix4.makeTranslation(0, y / 2.0, -z / 2.));
-  return geom;
-}
-const leafGeometry = createLeafGeometry();
-const leafMaterial = new THREE.MeshStandardMaterial({ color: 0xFF8884, side: THREE.DoubleSide });
-
-//L-Systems rules variables
+//L-Systems rules variables. TRY to change angles and use other rules. Or invent your own rules
 const angle = 35;
 const axiom = "F";
 let sentence = axiom;
@@ -105,19 +81,7 @@ const createTree = () => {
 
   for (const b of branches) {
     addBranch(geometry, b.start.position, b.end.position);
-
-    //TRY Add organs
-    // if (b.end.position.y > 0 && Math.random() > 0.5) {
-    //   addFlower(b, flowersGeometry);
-    // } else {
-    //   addLeaf(b, leavesGeometry);
-    // }
   }
-  let flower = new THREE.Mesh(flowersGeometry, flowerMaterial);
-  tree.add(flower)
-
-  const leaves = new THREE.Mesh(leavesGeometry, leafMaterial);
-  tree.add(leaves);
 
   const trunk = new THREE.LineSegments(geometry, material);
   tree.add(trunk);
@@ -128,32 +92,6 @@ const createTree = () => {
 const addBranch = (geom, v1, v2) => {
   geom.vertices.push(new THREE.Vector3(v1.x, v1.y, v1.z));
   geom.vertices.push(new THREE.Vector3(v2.x, v2.y, v2.z));
-}
-
-const addFlower = (branch, flowersGeometry) => {
-  let flower = flowerGeometry.clone();
-  flower.applyMatrix(cachedMatrix4.makeTranslation(
-    branch.end.position.x,
-    branch.end.position.y,
-    branch.end.position.z));
-
-  flowersGeometry.merge(flower);
-}
-
-const addLeaf = (branch, leavesGeometry) => {
-  const leaf = leafGeometry.clone();
-  branch.end.getWorldQuaternion(cachedQuat);
-
-  cachedMatrix4.makeRotationFromQuaternion(cachedQuat);
-  leaf.applyMatrix(cachedMatrix4);
-
-  cachedMatrix4.makeTranslation(
-    branch.end.position.x,
-    branch.end.position.y,
-    branch.end.position.z);
-  leaf.applyMatrix(cachedMatrix4);
-
-  leavesGeometry.merge(leaf);
 }
 
 const generate = (rules) => {
@@ -201,8 +139,6 @@ const createBranchesFromSentence = (sentence, branches, len) => {
     }
 
     if (addBranch) {
-      // TRY add random rotation on the y axis
-      // turtle.rotateY(Math.random()* Math.PI/6);
       let end = turtle.clone().translateY(len);
       let branch = { "start": turtle.clone(), "end": end };
       turtle.copy(end);
@@ -212,8 +148,6 @@ const createBranchesFromSentence = (sentence, branches, len) => {
 }
 
 const render = () => {
-  // TRY, addo some rotation
-  // tree.rotateY(0.001);
   renderer.render(scene, camera);
   requestAnimationFrame(render);
 }

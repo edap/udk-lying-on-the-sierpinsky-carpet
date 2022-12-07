@@ -52,6 +52,8 @@ References:
 
 [Hilbert's Curve: Is infinite math useful? video by 3Blue1Brown](https://www.youtube.com/watch?v=3s7h2MHQtxc&t=10s)
 
+[Hilbert curve Shiffman tutorial](https://thecodingtrain.com/challenges/c3-hilbert-curve)
+
 [Space Filling curves website](http://spacefillingcurves.com/HorrorVacui.html)
 
 [wiki page of the Peano curve](https://en.wikipedia.org/wiki/Peano_curve)
