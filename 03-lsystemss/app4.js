@@ -1,19 +1,25 @@
 
+let n = 1;
 let len = 20;
 let angle = 25.7;
 let lsystem = new LSystem({
-    axiom: 'X',
-    productions: {
-        'X': 'F[+X][-X]FX',
-        'F': 'FF',
-    }
+    axiom: 'F',
 })
+
+lsystem.setProduction('F', {
+    successors: [
+        { weight: 33, successor: 'F[+F]F[-F]F' }, // 33% probability
+        { weight: 33, successor: 'F[+F]F' },// 33% probability
+        { weight: 34, successor: 'F[-F]F' }// 34% probability
+    ]
+})
+
 
 var sentence = lsystem.getString();
 
 function generate() {
     len *= 0.8;
-    lsystem.iterate();
+    lsystem.iterate(n);
     sentence = lsystem.getString();
     createP(sentence);
     turtle();

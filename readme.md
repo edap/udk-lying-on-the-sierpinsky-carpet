@@ -40,12 +40,17 @@ L-Systems
 
 Theory and Exercise in class
 
+### Lesson 5, 07/12/2022
+
+L-Systems, multiple rules from the book "Algorithmic beauty of nature"
+
+Intro to stochastic rules, context sensitive rules and to parametric rules with the library [lindenmayer](https://github.com/nylki/lindenmayer)
 
 ### Lesson 5, 07/12/2022
 
 Theory, self filling curves.
 
-Hilbert curve in class (credits to Daniel Shiffman)
+Peano Curve in class
 
 References:
 [Video tutorial by Numberphilie](https://www.youtube.com/watch?v=x-DgL49CFlM)
