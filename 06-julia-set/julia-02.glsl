@@ -30,6 +30,9 @@ void main(){
     for(int i=iterations;i>0;i--){
         // do you remember how to square a complex number?
         // (a+bi)^2 => aa-bb + 2abi
+        // aa-bb +2abi is just another complex number,
+        // where aa-bb is the real part
+        // and 2abi is the imaginary part
         float aa=z.x*z.x;
         float bb=z.y*z.y;
         float twoab=2.*z.x*z.y;// this is the 2abi in the formula.
